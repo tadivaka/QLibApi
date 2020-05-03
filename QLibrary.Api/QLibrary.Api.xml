@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QLibrary.Api</name>
+    </assembly>
+    <members>
+        <member name="T:QLibrary.Api.Concrete.ApiAuthorizedControllerBase">
+            <summary>
+            ApiAuthorizedControllerBase
+            </summary>
+        </member>
+        <member name="M:QLibrary.Api.Concrete.ApiIdentityDbContext.#ctor(Microsoft.Extensions.Options.IOptions{QLibrary.Api.Concrete.AppSettings},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            ApiIdentityDbContext
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:QLibrary.Api.Concrete.ApiIdentityDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            OnConfiguring
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="T:QLibrary.Api.Concrete.ApiJwtToken">
+            <summary>
+            Class to Generate JwtToken for the API
+            </summary>
+        </member>
+        <member name="M:QLibrary.Api.Concrete.ApiJwtToken.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:QLibrary.Api.Concrete.ApiJwtToken.GenerateJwtToken(System.String,Microsoft.AspNetCore.Identity.IdentityUser,System.String)">
+            <summary>
+            Generates JwtToken
+            </summary>
+            <param name="email"></param>
+            <param name="user"></param>
+            <param name="userFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QLibrary.Api.Concrete.TransactionInfo">
+            <summary>
+            TransactionInfo
+            </summary>
+        </member>
+        <member name="T:QLibrary.Api.Concrete.UserDetails">
+            <summary>
+            UserDetails
+            </summary>
+        </member>
+        <member name="M:QLibrary.Api.Concrete.UserDetails.GetCurrentUserId(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+            GetCurrentUserId
+            </summary>
+            <param name="claim"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QLibrary.Api.Concrete.UserDetails.GetCurrentUserFullName(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+            GetCurrentUserFullName
+            </summary>
+            <param name="claim"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QLibrary.Api.Controllers.AccountController">
+            <summary>
+            Account Controller
+            </summary>
+        </member>
+        <member name="M:QLibrary.Api.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.UserManager{Microsoft.AspNetCore.Identity.IdentityUser},Microsoft.AspNetCore.Identity.SignInManager{Microsoft.AspNetCore.Identity.IdentityUser},Microsoft.Extensions.Configuration.IConfiguration,QLibrary.Api.Abstract.IApiJwtToken,QLibrary.BL.Abstract.IUsersService,Microsoft.Extensions.Logging.ILogger{QLibrary.Api.Controllers.AccountController})">
+            <summary>
+            Account Controller
+            </summary>
+            <param name="userManager"></param>
+            <param name="signInManager"></param>
+            <param name="configuration"></param>
+            <param name="apiJwtToken"></param>
+            <param name="logger"></param>
+            <param name="clientService"></param>
+            <param name="usersService"></param>
+            <param name="emailService"></param>
+        </member>
+        <member name="M:QLibrary.Api.Controllers.AccountController.Login(QLibrary.Dto.LoginDto)">
+            <summary>
+            Login
+            </summary>
+            <param name="loginDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QLibrary.Api.Utilities.Messages">
+            <summary>
+            Messages
+            </summary>
+        </member>
+    </members>
+</doc>
