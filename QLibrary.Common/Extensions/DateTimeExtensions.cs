@@ -1,13 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using QLibrary.Common.Enums;
+﻿using System;
 
 namespace QLibrary.Common.Extensions
 {
-
-    
     public static class DateTimeExtensions
     {
         public static int Century(this DateTime dt)

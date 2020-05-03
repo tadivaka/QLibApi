@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using QLibrary.Dto;
-using  QLibrary.Api.Concrete;
+using QLibrary.Api.Concrete;
 
 namespace QLibrary.Api.Controllers
 {

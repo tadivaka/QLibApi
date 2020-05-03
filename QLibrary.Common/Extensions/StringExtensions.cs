@@ -6,8 +6,6 @@ using QLibrary.Common.Enums;
 
 namespace QLibrary.Common.Extensions
 {
-
-    
     public static class StringExtensions
     {
         public static string Repeat(this char chatToRepeat, int repeat)
@@ -44,6 +42,5 @@ namespace QLibrary.Common.Extensions
             return s;
             
         }
-
     }
 }

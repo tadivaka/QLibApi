@@ -1,5 +1,4 @@
-﻿using QLibrary.Common.Helper;
-using QLibrary.Data;
+﻿using QLibrary.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -140,8 +139,5 @@ namespace QLibrary.DomainModel
                 return "";
             }
         }
-
-
-
     }
 }
