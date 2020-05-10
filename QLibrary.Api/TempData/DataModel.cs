@@ -14,6 +14,7 @@ namespace  QLibrary.Api
         string _sqlConnStr = "SERVER=OSIT-L-0138;DATABASE=QLibraryDevData; uid=sa; Password=Sql@12345;";
         public List<QueryDto> GetAllQueries()
         {
+           System.Threading.Thread.Sleep(1000);
             var objQueryList = new List<QueryDto>();
             using (var connection = new SqlConnection(_sqlConnStr))
             {
@@ -178,6 +179,7 @@ namespace  QLibrary.Api
         }
         public int InsertQuery(QueryDto qry)
         {
+           System.Threading.Thread.Sleep(10000);
             int value = 0;
             using (var connection = new SqlConnection(_sqlConnStr))
             {
@@ -239,6 +241,19 @@ namespace  QLibrary.Api
                 connection.Close();
             }
             return value;
+        }
+        public void DeleteQueryByQueryId(int QueryId)
+        {
+           var objQuery = new QueryDto();
+           using (var connection = new SqlConnection(_sqlConnStr))
+           {
+              connection.Open();
+              var cmd = new SqlCommand("SP_DeleteQueryByQueryId", connection);
+              cmd.CommandType = CommandType.StoredProcedure;
+              cmd.Parameters.Add(new SqlParameter("@QueryId", QueryId));
+              cmd.ExecuteNonQuery();
+              connection.Close();
+           }
         }
     }
 }

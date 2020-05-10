@@ -7,7 +7,7 @@ namespace QLibrary.Api.Controllers
 {
    [Route("api/[controller]/[action]")]
    [ApiController]
-   public class QueryController : Controller// ApiAuthorizedControllerBase
+   public class QueryController : ApiAuthorizedControllerBase //Controller//
    {
       [HttpGet]
       public IEnumerable<QueryDto> Get()
@@ -40,6 +40,8 @@ namespace QLibrary.Api.Controllers
       [HttpDelete]
       public void Delete(int id)
       {
+         DataModel ObjModel = new DataModel();
+         ObjModel.DeleteQueryByQueryId(id);
       }
    }
 }
