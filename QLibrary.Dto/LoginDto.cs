@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 namespace QLibrary.Dto {
     //TODO: Need to confirm about the login as email 
     public class LoginDto {
+       public string Name { get; set; }
+
        [Required]
        public string Email { get; set; }
 

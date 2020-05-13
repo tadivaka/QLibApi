@@ -127,7 +127,9 @@ namespace QLibrary.Api
          // This is a global policy - assigned here OR we can assign on each controller
          // As of Now we assigned globla policy
          app.UseCors("CorsPolicy");
-
+         app.UseCors(options=>options.WithOrigins("https://localhost:4200")); 
+         app.UseCors(options=>options.WithOrigins("https://localhost:4242")); 
+         app.UseCors(options=>options.WithOrigins("https://localhost:4343"));
          // ===== Add Log4Net ======
          loggerFactory.AddLog4Net();
          app.UseStaticHttpContext();

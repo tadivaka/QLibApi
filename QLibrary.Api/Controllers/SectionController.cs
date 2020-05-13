@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using QLibrary.Dto;
+using QLibrary.Api.Concrete;
 
 namespace QLibrary.Api.Controllers
 {
    [Route("api/[controller]/[action]")]
    [ApiController]
-   public class SectionController : Controller// ApiAuthorizedControllerBase
+   public class SectionController : ApiAuthorizedControllerBase // Controller//
    {
       // GET api/<controller>
       [HttpGet]

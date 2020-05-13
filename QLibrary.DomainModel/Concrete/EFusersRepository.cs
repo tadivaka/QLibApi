@@ -12,8 +12,8 @@ namespace QLibrary.DomainModel.Concrete
       {
          using (var db = new DevDbContext())
          {
-            var resUser = await db.AspNetUsers.Where(x => x.Id == userId).Select(x => new { x.NormalizedUserName }).FirstOrDefaultAsync();
-            return resUser.NormalizedUserName + " " + resUser.NormalizedUserName;
+            var resUser = await db.AspNetUsers.Where(x => x.Id == userId).Select(x => new { x.UserName }).FirstOrDefaultAsync();
+            return resUser.UserName + " " + resUser.UserName;
          }
       }
    }

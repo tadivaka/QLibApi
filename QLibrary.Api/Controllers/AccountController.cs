@@ -124,7 +124,7 @@ namespace QLibrary.Api.Controllers
       }
 
       [HttpPost]
-      public async Task<IActionResult> RegisterAsync([FromBody] RegisterDto registerDto)
+      public async Task<IActionResult> RegisterAsync([FromBody] LoginDto registerDto)
       {
          _logger.WriteLogInformation(ComponentLayer.API, $"{nameof(AccountController)}", $"{nameof(RegisterAsync)}", MethodLine.BEGIN, registerDto.Email);
          var user = new IdentityUser
